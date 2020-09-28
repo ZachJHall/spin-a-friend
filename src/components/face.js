@@ -5,7 +5,10 @@ const FaceContainer = styled.div`
     height: 250px;
     width: 200px;
 
-    background-color: white;
+    
+
+
+    background-color: blue;
     border-radius: 100%;
 
    animation: spin 3s infinite linear;

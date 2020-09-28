@@ -1,21 +1,40 @@
 import React from 'react';
 import styled from 'styled-components'
 
+import ContentLevel from './components/contentLevel'
 import Face from './components/face'
 
 const Container = styled.div`
-  background-color:green;
 
   height:100vh;
+
+`
+
+
+
+const FaceLevel = styled(Container)`
+  height: 100vh;
+  width:100vw;
 
   display:flex;
   justify-content:center;
   align-items:center;
+
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left:0;
+
 `
 function App() {
   return (
     <Container>
-      <Face />
+      <ContentLevel />
+        
+      <FaceLevel>
+        <Face />
+      </FaceLevel>
+
     </Container>
   );
 }
