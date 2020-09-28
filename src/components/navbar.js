@@ -6,19 +6,25 @@ const NavContainer = styled.div`
     min-height: 10%;
     width: 100%;
     
-
     display: flex;
-
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 `
 
 const LeftDiv = styled.div`
-    width: 10%;
+    width: auto;
+    min-width: 10%;
+
+    display: flex;
+    justify-content: flex-start;    
+    background-color: red;
 `
 
 const MiddleDiv = styled.div`
+    background-color: green;
 
+    display:flex;
+    justify-content:center;
 `
 
 const RightDiv = styled(LeftDiv)`
@@ -31,12 +37,13 @@ const Text =styled.h1`
 function NavBar() {
     return (
         <NavContainer>
-            <LeftDiv />
-
+            <LeftDiv>
+                <Text>Test</Text>
+            </LeftDiv>
             <MiddleDiv>
                 <Text>Spin A Friend</Text>
             </MiddleDiv>
-            
+
             <RightDiv />
         </NavContainer>
         
