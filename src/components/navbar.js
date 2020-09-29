@@ -17,11 +17,9 @@ const LeftDiv = styled.div`
 
     display: flex;
     justify-content: flex-start;    
-    background-color: red;
 `
 
 const MiddleDiv = styled.div`
-    background-color: green;
 
     display:flex;
     justify-content:center;
@@ -38,8 +36,12 @@ function NavBar() {
     return (
         <NavContainer>
             <LeftDiv>
-                <Text>Test</Text>
+                <a target="_blank" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fspinafriend.com%2F&text=Spin%20A%20Friend%20by%20%40zachjohnhall%0a&url=https%3A%2F%2Fspinafriend.com%2F">
+                    <button>Tweet this</button>
+                </a>
+                
             </LeftDiv>
+
             <MiddleDiv>
                 <Text>Spin A Friend</Text>
             </MiddleDiv>

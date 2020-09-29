@@ -21,7 +21,7 @@ const FaceLevel = styled(Container)`
   align-items:center;
 
   position: absolute;
-  z-index: 2;
+  z-index: -1;
   top:0;
   left:0;
 
