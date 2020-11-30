@@ -7,6 +7,10 @@ const ContentContainer = styled.div`
   height: 90%;
   width: 100%;
 
+  @media (max-width: 768px){
+      height: 85%;
+  }
+
 `
 
 const MainDiv = styled.div`
