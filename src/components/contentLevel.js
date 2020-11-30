@@ -8,7 +8,7 @@ const ContentContainer = styled.div`
   width: 100%;
 
   @media (max-width: 768px){
-      height: 85%;
+      height: 80%;
   }
 
 `
