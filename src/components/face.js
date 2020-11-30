@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from 'styled-components'
 
+
+
 const FaceContainer = styled.div`
     height: 250px;
     width: 200px;
 
-    
-
-
     background-color: blue;
     border-radius: 100%;
 
-   animation: spin 3s infinite linear;
+    border-style: solid;
+
+    animation: spin 4s infinite linear;
     
    
     @keyframes spin {
@@ -24,12 +25,20 @@ const FaceContainer = styled.div`
 
 `
 
+const FaceImage = styled.img`
+    height:100%;
+    width:100%;
+    object-fit: cover;
+
+    border-radius: 100%;
+
+`
 
 
-function Face() {
+function Face(props) {
     return (
       <FaceContainer>
-
+        <FaceImage ref={props.dataPass}/>
       </FaceContainer>
     );
   }

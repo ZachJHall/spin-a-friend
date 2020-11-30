@@ -32,12 +32,15 @@ const Text =styled.h1`
     margin:0;
 `
 
+const TweetButton =styled.button`
+`
+
 function NavBar() {
     return (
         <NavContainer>
             <LeftDiv>
                 <a target="_blank" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fspinafriend.com%2F&text=Spin%20A%20Friend%20by%20%40zachjohnhall%0a&url=https%3A%2F%2Fspinafriend.com%2F">
-                    <button>Tweet this</button>
+                    <TweetButton>Tweet This</TweetButton>
                 </a>
                 
             </LeftDiv>

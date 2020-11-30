@@ -4,13 +4,12 @@ import styled from 'styled-components'
 import ContentLevel from './components/contentLevel'
 import Face from './components/face'
 
+
 const Container = styled.div`
 
   height:100vh;
 
 `
-
-
 
 const FaceLevel = styled(Container)`
   height: 100vh;
@@ -26,14 +25,62 @@ const FaceLevel = styled(Container)`
   left:0;
 
 `
+
+const UploadContainer = styled.div`
+    height: 10vh;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+`
+
+const UploadButton = styled.input`
+    height: auto;
+    margin: 0;
+    margin-bottom: 5px;
+`
+
+
 function App() {
+
+  // This blog post` was extremely useful for uploading on the client site https://dev.to/asimdahall/client-side-image-upload-in-react-5ffc
+
+  const uploadedImage = React.useRef(null);
+
+  const handleImageUpload = e => {
+
+    const [file] = e.target.files;
+    if (file) {
+      const input = new FileReader();
+      const {current} = uploadedImage;
+      current.file = file
+      input.onload = (e) => {
+        current.src = e.target.result;
+      }
+      input.readAsDataURL(file);
+    }
+  };
+
+
   return (
     <Container>
       <ContentLevel />
         
       <FaceLevel>
-        <Face />
+        <Face dataPass = {uploadedImage} />        
       </FaceLevel>
+
+
+      <UploadContainer>
+            <UploadButton onChange={handleImageUpload} type="file" accept="image/*"  multiple = "false"/>
+            <h4>Upload a friends image</h4>
+
+      </UploadContainer>
+
+
 
     </Container>
   );
