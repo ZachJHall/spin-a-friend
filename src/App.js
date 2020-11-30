@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components'
 
+import ReactGA from 'react-ga'
+
+
 import ContentLevel from './components/contentLevel'
 import Face from './components/face'
 
+ReactGA.initialize(process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none")
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Container = styled.div`
 
